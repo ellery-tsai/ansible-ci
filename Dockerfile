@@ -8,7 +8,7 @@ ENV PATH="${SONAR_SCANNER_HOME}/bin:${PATH}"
 
 RUN dnf install -y --nodocs \
         ca-certificates \
-        curl \
+        curl-minimal \
         git \
         openssh-clients \
         unzip \
