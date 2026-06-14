@@ -48,7 +48,7 @@ docker run --rm \
 
 ## 映像規格
 
-- **Base image**: `python:3.12-slim`
+- **Base image**: `registry.access.redhat.com/ubi9/python-312`
 - **SonarQube Scanner 安裝路徑**: `/opt/sonar-scanner`
 - **工作目錄**: `/work`
 - **預設指令**: `bash`

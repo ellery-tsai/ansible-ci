@@ -35,7 +35,7 @@ docker run --rm -v /path/to/project:/work ansible-ci sonar-scanner
 
 | Item | Value |
 |------|-------|
-| Base image | `python:3.12-slim` |
+| Base image | `registry.access.redhat.com/ubi9/python-312` |
 | SonarQube Scanner version | `6.2.1.4610` (ARG, overridable) |
 | SonarQube install path | `/opt/sonar-scanner` |
 | Default working directory | `/work` |

@@ -1,18 +1,18 @@
-FROM python:3.12-slim
+FROM registry.access.redhat.com/ubi9/python-312
+
+USER root
 
 ARG SONAR_SCANNER_VERSION=6.2.1.4610
-ENV DEBIAN_FRONTEND=noninteractive
 ENV SONAR_SCANNER_HOME=/opt/sonar-scanner
 ENV PATH="${SONAR_SCANNER_HOME}/bin:${PATH}"
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN dnf install -y --nodocs \
         ca-certificates \
         curl \
         git \
-        openssh-client \
+        openssh-clients \
         unzip \
-    && rm -rf /var/lib/apt/lists/*
+    && dnf clean all
 
 RUN pip install --no-cache-dir ansible-lint yamllint
 
